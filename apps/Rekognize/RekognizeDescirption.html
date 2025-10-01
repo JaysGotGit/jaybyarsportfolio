@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evently</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a2a38; /* Cool dark blue */
+      color: #e6f1f8; /* Soft light blue text */
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #223b4f;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00ffff; /* Neon cyan */
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+      background-color: rgba(255, 255, 255, 0.03);
+      padding: 1.5rem;
+      border-left: 4px solid #ffaa44; /* Neon orange accent */
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(255, 170, 68, 0.2);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rekognize</h1>
+  </header>
+
+  <main>
+    <section class="section">
+      <p>
+
+This application allows users to upload an image through a web interface, where it is processed in real time using a combination of AWS services:
+<p>
+1.	Image Upload:
+A user uploads an image through the frontend (e.g., a website form), which stores the image in an Amazon S3 bucket.
+<p>
+2.	Object Detection with Amazon Rekognition:
+The upload automatically triggers an AWS Lambda function that sends the image to Amazon Rekognition. Rekognition analyzes the image and returns a set of labels describing objects, scenes, or activities, along with confidence scores.
+<p>
+3.	Human-Friendly Summary with Amazon Bedrock:
+The resulting label data is passed to another Lambda function, which uses Amazon Bedrock (e.g., Claude 3 via Anthropic) to generate a short, vivid description of the image — as if explaining it to someone who cannot see.
+<p>
+4.	Accessible Output in HTML Format:
+The final output is saved as a readable HTML file in a separate S3 location (e.g., byarsportfolio/apps/Rekognize/), including the original image and a friendly AI-generated description.
+<p>
+
+✅ Key Technologies Used:
+
+•	Amazon S3 – storage for uploaded images and generated descriptions<p>
+•	Amazon Rekognition – image analysis (object and scene detection)<p>
+•	Amazon Bedrock – AI summarization using foundation models <p>
+•	AWS Lambda – serverless backend logic<p>
+•	Python – logic to process and transform data<p>
+•	HTML – user-facing output format<p>
+<p>
+
+
+🔍 Use Cases
+
+
+
+<p>1. 
+Accessibility Enhancements
+
+
+•	Describe images for users who are visually impaired<p>
+•	Add alternative text (“alt text”) to user-uploaded photos automatically<p>
+
+
+
+2. 
+Content Moderation / Review<p>
+
+
+•	Provide quick overviews of uploaded content for safety teams<p>
+•	Flag certain objects or scenes for manual review<p>
+
+
+
+3. 
+E-Commerce & Marketplaces<p>
+
+
+•	Auto-generate product image descriptions for listings<p>
+•	Enrich SEO by embedding human-like summaries of visual content<p>
+
+
+
+4. 
+Education & Learning<p>
+
+
+•	Describe historical, scientific, or geographic images for students<p>
+•	Help children understand complex images with simpler descriptions<p>
+
+
+
+5. 
+Digital Portfolios / Media Management<p>
+
+
+•	Automatically generate image captions for artists, photographers, or journalists<p>
+•	Tag and sort media libraries based on visual content<p>
+
+
+<img src="images/rokognizediagram.png" alt="Your image description">
+
+      
+    </section>
+Please Try out the working demo below. 
+<p>
+    <section class="section">
+      <embed src="./Rokognize.html" style="width:100%; height: 1500px;">
+    </section>
+
+  
+	
+	
+  </main>
+
+</body>
+</html>

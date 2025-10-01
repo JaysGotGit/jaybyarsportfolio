@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel and Expense bot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a2a38; /* Cool dark blue */
+      color: #e6f1f8; /* Soft light blue text */
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #223b4f;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00ffff; /* Neon cyan */
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+      background-color: rgba(255, 255, 255, 0.03);
+      padding: 1.5rem;
+      border-left: 4px solid #ffaa44; /* Neon orange accent */
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(255, 170, 68, 0.2);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Travel and Expense Bot</h1>
+  </header>
+
+  <main>
+    <section class="section">
+      <p>
+Scenario: Automating Employee Travel & Expense Inquiries at AnyCompany
+<p>
+Background:
+AnyCompany has over 1,000 employees spread across multiple regions. Each month, dozens of employees travel for business and submit expense reports for reimbursement. HR and finance teams are frequently bombarded with questions like:
+
+"What’s the per diem for meals in New York?"
+
+"Can I expense an Uber from my hotel to the client site?"
+
+"What’s the approval process for international travel?"
+
+These repetitive inquiries consume valuable time from HR, finance, and management teams, reducing overall productivity and delaying employee reimbursements.
+<p>
+
+Benefits of the Bot
+<p>
+1. Improved Employee Experience
+Employees get instant, consistent answers without digging through policy documents or waiting for email responses.
+<p>
+Available 24/7, supporting employees in different time zones or traveling internationally.
+<p>
+2. Increased HR & Finance Productivity
+Frees up HR and finance teams from answering repetitive questions.
+<p>
+Allows staff to focus on more strategic tasks like policy improvement or exception handling.
+<p>
+3. Consistency & Compliance
+Ensures employees receive accurate, up-to-date information.
+<p>
+Reduces the risk of misinterpreting policies or submitting non-compliant expenses.
+<p>
+4. Scalability
+Easily scales to support more users, more questions, or more policies (e.g., integrating company credit card or vendor guidelines).
+<p>
+Amazon Lex supports continuous improvement by training on real queries received.
+<p>
+5. Cost Efficiency
+Reduces the volume of support tickets and email threads related to travel and expense policies.
+<p>
+Minimizes errors and processing delays that could lead to financial losses.
+<p>
+Solution:
+
+To improve operational efficiency and employee self-service, AnyCompany developed a chatbot using Amazon Lex. It accepts questions from the user and passes that question to Amazon Bedrock. 
+And through a process called RAG (Retrieval-Augmented Generation), Amazon Bedrock integrates with a knowledge base containing all travel and expense policy information
+for AnyCompany. The data for the knowledge base is contained in S3.
+
+Employees can now access this chatbot via Slack, Microsoft Teams, or the company’s internal HR portal and ask questions in natural language, 24/7.
+
+
+<img src="images/TravelAndExpenseBotDiagram.png" alt="Your image description">
+
+      
+    </section>
+Click the play button below to see a brief demo.
+<p>
+    <section class="section">
+       <video controls width="800" height=800>
+        <source
+            src="images/ChatBot.mp4"
+            type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </section>
+
+  
+	
+	
+  </main>
+
+</body>
+</html>

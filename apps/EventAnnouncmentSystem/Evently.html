@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text Summarizer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a2a38; /* Cool dark blue */
+      color: #e6f1f8; /* Soft light blue text */
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #223b4f;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00ffff; /* Neon cyan */
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+      background-color: rgba(255, 255, 255, 0.03);
+      padding: 1.5rem;
+      border-left: 4px solid #ffaa44; /* Neon orange accent */
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(255, 170, 68, 0.2);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Evently</h1>
+  </header>
+
+  <main>
+    <section class="section">
+      <p>
+Scenario: Anycompany's Internal Engagement Platform<p>
+Company Profile:
+Anycompany Inc. is a mid-sized technology firm with around 500 employees distributed across multiple offices and remote locations. The company emphasizes strong internal communication, culture-building, and professional development.
+<p>
+Challenge:
+As Anycompany grew, internal communications became scattered. The HR team, department heads, and employee resource groups (ERGs) regularly organized various events such as:
+
+Town halls and leadership Q&As
+
+Departmental training sessions
+
+Employee wellness webinars
+
+Hackathons and innovation days
+
+Social gatherings (virtual and physical)
+
+ERG-hosted cultural events
+
+Despite having email and chat tools, employees often missed announcements, forgot to RSVP, or couldn’t keep track of events they were interested in.
+<p>
+
+Use Case:
+
+Event Creation: HR and team leads can easily create and schedule events with descriptions, times, locations (virtual or physical), and categories (e.g., Training, Social, Leadership).
+
+Subscriptions: Employees subscribe to topics they care about (e.g., tech talks, wellness, leadership).
+
+Notifications: Users get timely reminders via email, SMS, or in-app alerts when events are published, updated, or about to start.
+
+Engagement Metrics: Admins can view who subscribed, who attended, and get feedback to improve future events.
+<p>
+Benefits:
+
+Centralized event communication.
+
+Higher participation and engagement.
+
+Personalized notifications instead of spammy email blasts.
+
+Better visibility for event organizers.
+
+<p>
+Solution:
+Use Amazon Web Services to create a serverless solution to the problem. The user interacts from a web page that allows them to view events, create events and subscribe to the events. The page also shows a dashboard displaying relevant information about the events such as number of notifications delivered, number failed, etc. 
+The solution uses AWS Lambda to update a file stored in Amazon S3 that contains a list of events. It also uses another lambda to submit requests to subscribe in SNS. And 
+uses an Amazon CloudWatch dashboard to display metrics from the subscription.
+
+<img src="images/eventlydiagram.png" alt="Your image description">
+
+      
+    </section>
+Please Try out the working demo below. 
+<p>
+    <section class="section">
+      <embed src="./EventIndex.html" style="width:100%; height: 1500px;">
+    </section>
+
+  
+	
+	
+  </main>
+
+</body>
+</html>

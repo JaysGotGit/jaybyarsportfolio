@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload to S3</title>
+</head>
+<body>
+  <h1>Upload File to S3</h1>
+  <input type="file" id="fileInput" />
+  <button onclick="uploadFile()">Upload</button>
+
+  <script>
+    async function uploadFile() {
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+      if (!file) {
+        alert("Please select a file first.");
+        return;
+      }
+
+      // Replace with your actual API Gateway URL
+      const apiEndpoint = "https://af5xfc1qse.execute-api.us-east-1.amazonaws.com/prod";
+
+      const response = await fetch(`${apiEndpoint}?name=${file.name}&type=${file.type}`);
+      const data = await response.json();
+      const uploadUrl = data.url;
+
+      const result = await fetch(uploadUrl, {
+        method: "PUT",
+        headers: {
+          "Content-Type": file.type
+        },
+        body: file
+      });
+
+      if (result.ok) {
+        alert("File uploaded successfully!");
+      } else {
+        alert("Upload failed.");
+      }
+    }
+  </script>
+</body>
+</html>

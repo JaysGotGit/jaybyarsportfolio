@@ -16,3 +16,10 @@ h2 {
   justify-content: center; /* centers your columns */
   flex-wrap: wrap;
 }
+
+#portfolio img {
+  width: 300px;     /* force same width */
+  height: 200px;    /* force same height */
+  object-fit: cover; /* crop edges but keep aspect ratio */
+  display: block;
+}

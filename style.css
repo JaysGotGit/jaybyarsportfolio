@@ -1,4 +1,9 @@
 /* style.css */
+
+:root {
+  --image-width: 300px;
+  --image-height: 200px;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -18,8 +23,14 @@ h2 {
 }
 
 #portfolio img {
-  width: 300px;     /* force same width */
-  height: 200px;    /* force same height */
+  width: var(--image-width);     /* force same width */
+  height: 2var(--image-height);    /* force same height */
   object-fit: cover; /* crop edges but keep aspect ratio */
   display: block;
+}
+
+#portfolio .item h3 {
+  width: var(--image-width);  /* match the image width */
+  text-align: center;
+  margin: 0 auto;
 }

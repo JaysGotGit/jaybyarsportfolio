@@ -27,5 +27,6 @@ h2 {
   height: 2var(--image-height);    /* force same height */
   object-fit: cover; /* crop edges but keep aspect ratio */
   display: block;
+  margin: 0 auto;
 }
 

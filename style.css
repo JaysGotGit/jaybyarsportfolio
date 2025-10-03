@@ -29,7 +29,7 @@ h2 {
   display: block;
 }
 
-#portfolio .item h3 {
+h3 {
   width: var(--image-width);  /* match the image width */
   text-align: center;
   margin: 0 auto;
